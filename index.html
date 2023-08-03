@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask and HTML Application</title>
+</head>
+<body>
+    <h1>Quarterly Earnings</h1>
+    {% if table %}
+        {{ table|safe }}
+    {% else %}
+        <p>No data available.</p>
+    {% endif %}
+</body>
+</html>
