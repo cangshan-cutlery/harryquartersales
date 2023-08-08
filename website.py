@@ -48,7 +48,7 @@ def get_data():
 
 @app.route('/generate_excel')
 def generate_excel():
-    data = get_data()
+    data,other = get_data()
     excel_buffer = io.BytesIO()
     excel_writer = pd.ExcelWriter(excel_buffer, engine='xlsxwriter')
     data.to_excel(excel_writer, sheet_name='Sheet1', index=False)
